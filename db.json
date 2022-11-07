@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "first": "asd",
+      "name": "asd",
+      "numphone": "sad",
+      "weeklyKPI": "dsad",
+      "monthlyKPI": "dsad",
+      "id": 1
+    },
+    {
+      "first": "asd",
+      "name": "dasd",
+      "numphone": "dasda",
+      "weeklyKPI": "dsadsa",
+      "monthlyKPI": "dsads",
+      "id": 2
+    },
+    {
+      "first": "sdax",
+      "name": "asc",
+      "numphone": "41234",
+      "weeklyKPI": "dfc",
+      "monthlyKPI": "cds",
+      "id": 3
+    },
+    {
+      "first": "123",
+      "name": "213`321",
+      "numphone": "213",
+      "weeklyKPI": "123",
+      "monthlyKPI": "213",
+      "id": 4
+    }
+  ]
+}
