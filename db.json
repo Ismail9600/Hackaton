@@ -9,28 +9,52 @@
       "id": 1
     },
     {
-      "first": "asd",
-      "name": "dasd",
-      "numphone": "dasda",
-      "weeklyKPI": "dsadsa",
-      "monthlyKPI": "dsads",
-      "id": 2
-    },
-    {
       "first": "sdax",
       "name": "asc",
       "numphone": "41234",
-      "weeklyKPI": "dfc",
-      "monthlyKPI": "cds",
+      "weeklyKPI": "32",
+      "monthlyKPI": "43",
       "id": 3
     },
     {
-      "first": "123",
-      "name": "213`321",
-      "numphone": "213",
-      "weeklyKPI": "123",
-      "monthlyKPI": "213",
+      "first": "fjkf",
+      "name": "dsf",
+      "numphone": "1235",
+      "weeklyKPI": "34",
+      "monthlyKPI": "45",
       "id": 4
+    },
+    {
+      "first": "sds",
+      "name": "sad",
+      "numphone": "zxz",
+      "weeklyKPI": "321",
+      "monthlyKPI": "21",
+      "id": 5
+    },
+    {
+      "first": "FDS",
+      "name": "EDSA",
+      "numphone": "23432",
+      "weeklyKPI": "WDAS",
+      "monthlyKPI": "HTBT",
+      "id": 6
+    },
+    {
+      "first": "dxsa",
+      "name": "sds",
+      "numphone": "32431232",
+      "weeklyKPI": "23",
+      "monthlyKPI": "34",
+      "id": 7
+    },
+    {
+      "first": "isakov",
+      "name": "ismail",
+      "numphone": "+996551809097",
+      "weeklyKPI": "34",
+      "monthlyKPI": "32",
+      "id": 8
     }
   ]
 }

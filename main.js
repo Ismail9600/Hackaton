@@ -10,9 +10,9 @@ let list = document.querySelector("#product-list");
 
 let editFirst = document.querySelector("#edit-First");
 let editName = document.querySelector("#edit-Name");
-let editNumphone = document.querySelector("#edit-Num-phone");
-let editWeeklyKPI = document.querySelector("#edit-Weekly-KPI");
-let editMonthlyKPI = document.querySelector("#edit-Monthly-KPI");
+let editNumphone = document.querySelector("#edit-Numphone");
+let editWeeklyKPI = document.querySelector("#edit-WeeklyKPI");
+let editMonthlyKPI = document.querySelector("#edit-MonthlyKPI");
 let editbtnAdd = document.querySelector("#edit-btn-add");
 let editSaveBtn = document.querySelector("#btn-save-edit");
 let exampleModal = document.querySelector("#exampleModal");
@@ -49,7 +49,7 @@ btnAdd.addEventListener("click", async function () {
   await fetch(API, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json; charset=utf-8",
+      "Content-Type": "application/json; charset=UTF-8",
     },
     body: JSON.stringify(obj),
   });
@@ -151,16 +151,6 @@ document.addEventListener("click", function (e) {
   render();
 });
 
-//! удаление продукта
-// document.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("btn-delete")) {
-//     let id = e.target.id;
-//     fetch(`${API}/${id}`, {
-//       method: "DELETE",
-//     }).then(() => render());
-//   }
-// });
-
 function deleteProduct(id) {
   fetch(`${API}/${id}`, {
     method: "DELETE",
@@ -171,37 +161,29 @@ function deleteProduct(id) {
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("btn-edit")) {
     let id = e.target.id;
-    console.log(id);
     fetch(`${API}/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        //заполняем поля молдалки данными
-        editFirst.value = data.First;
-        editName.value = data.Name;
-        editNumphone.value = data.Numphone;
-        editWeeklyKPI.value = data.WeeklyKPI;
-        editMonthlyKPI.value = data.MonthlyKPI;
+        editFirst.value = data.first;
+        editName.value = data.name;
+        editNumphone.value = data.numphone;
+        editWeeklyKPI.value = data.weeklyKPI;
+        editMonthlyKPI.value = data.monthlyKPI;
 
         editSaveBtn.setAttribute("id", data.id);
       });
   }
 });
 
-// Todo сохранение изменений товара
-
 editSaveBtn.addEventListener("click", function () {
-  let id = this.id; // вытаскиваем из кнопки id
-  //   let price = editPrice.value;
-  //   console.log(id, editPrice.value);
+  let id = this.id;
+  let first = editFirst.value;
+  let name = editName.value;
+  let numphone = editNumphone.value;
+  let weeklyKPI = editWeeklyKPI.value;
+  let monthlyKPI = editMonthlyKPI.value;
 
-  //сохранение значение инпутов в переменные
-  let First = editFirst.value;
-  let Name = editName.value;
-  let Numphone = editNumphone.value;
-  let WeeklyKPI = editWeeklyKPI.value;
-  let MonthlyKPI = editMonthlyKPI.value;
-
-  if (!First || !Name || !Numphone || !WeeklyKPI || !MonthlyKPI) return; //проверка на заполенность полей в модальном окне
+  if (!first || !name || !numphone || !weeklyKPI || !monthlyKPI) return;
 
   let editedProduct = {
     first: first,
@@ -232,6 +214,6 @@ function saveEdit(editedProduct, id) {
 //! search
 
 searchInp.addEventListener("input", () => {
-  searchVal = searchInp.value; // записывает значение из поисковика в переменную searchVal
+  searchVal = searchInp.value;
   render();
 });
